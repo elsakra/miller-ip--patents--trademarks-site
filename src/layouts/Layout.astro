@@ -4,7 +4,7 @@ export interface Props {
   description?: string;
 }
 
-const { title, description = 'Miller IP - Expert Patent and Trademark Services. Protect your innovations with trusted intellectual property attorneys.' } = Astro.props;
+const { title, description = 'Miller IP specializes in patents and trademarks, protecting your innovations with expertise and dedication.' } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -17,22 +17,22 @@ const { title, description = 'Miller IP - Expert Patent and Trademark Services. 
     <title>{title}</title>
     <meta name="description" content={description} />
     
-    <!-- Open Graph -->
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   </head>
-  <body class="font-sans antialiased">
+  <body>
     <slot />
-    <script src="/src/scripts/animations.ts"></script>
   </body>
 </html>
-
-<style is:global>
-  @import '/src/styles/global.css';
-</style>

@@ -1,62 +1,129 @@
 ---
-const services = [
-  {
-    title: "Patents",
-    description: "Comprehensive patent prosecution and strategy for innovations across all industries",
-    features: ["Utility Patents", "Design Patents", "Patent Search & Analysis", "International Filing"],
-    icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-  },
-  {
-    title: "Trademarks",
-    description: "Protect your brand identity with comprehensive trademark services",
-    features: ["Trademark Search", "Registration", "Opposition & Cancellation", "Brand Strategy"],
-    icon: "M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
-  },
-  {
-    title: "IP Strategy",
-    description: "Strategic counsel to maximize the value of your intellectual property portfolio",
-    features: ["Portfolio Management", "Licensing", "Due Diligence", "Enforcement"],
-    icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-  }
-];
+// Services Component
 ---
 
-<section id="services" class="py-24 md:py-32 bg-white">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="text-center mb-16">
-      <h2 class="text-4xl md:text-5xl font-bold text-stone-900 mb-4 animate-on-scroll">
-        Comprehensive IP Services
+<section id="services" class="py-24 md:py-32 lg:py-40 bg-white">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16 md:mb-20">
+      <h2 class="text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter text-stone-900 mb-6 animate-on-scroll">
+        OUR SERVICES
       </h2>
-      <p class="text-xl text-stone-600 max-w-3xl mx-auto animate-on-scroll">
-        From initial filing to enforcement, we protect what matters most to your business
+      <p class="text-xl text-stone-600 leading-relaxed animate-on-scroll">
+        Comprehensive intellectual property solutions tailored to protect and maximize the value of your innovations.
       </p>
     </div>
     
-    <div class="grid md:grid-cols-3 gap-8">
-      {services.map((service, index) => (
-        <div class="group relative bg-white rounded-2xl p-8 shadow-xl shadow-stone-200/50 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 animate-on-scroll">
-          <div class="absolute -inset-0.5 bg-gradient-to-r from-amber-600 to-rose-600 rounded-2xl opacity-0 group-hover:opacity-10 blur transition duration-500"></div>
-          <div class="relative">
-            <div class="w-14 h-14 bg-gradient-to-br from-amber-500 to-rose-500 rounded-xl flex items-center justify-center mb-6">
-              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={service.icon}></path>
-              </svg>
-            </div>
-            <h3 class="text-2xl font-bold text-stone-900 mb-3">{service.title}</h3>
-            <p class="text-stone-600 mb-6">{service.description}</p>
-            <ul class="space-y-2">
-              {service.features.map(feature => (
-                <li class="flex items-center gap-2 text-stone-700">
-                  <svg class="w-5 h-5 text-amber-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                  </svg>
-                  <span>{feature}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+    <!-- Services Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" data-stagger-children>
+      <!-- Patent Services -->
+      <div class="group bg-stone-50 rounded-2xl p-8 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 animate-on-scroll">
+        <div class="w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+          </svg>
         </div>
-      ))}
+        <h3 class="text-2xl font-bold text-stone-900 mb-4">Patent Services</h3>
+        <p class="text-stone-600 mb-6 leading-relaxed">
+          From provisional applications to international filings, we guide you through every step of the patent process.
+        </p>
+        <ul class="space-y-3 text-stone-700">
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Patent Searches & Analysis</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Application Drafting</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Prosecution & Appeals</span>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Trademark Services -->
+      <div class="group bg-stone-50 rounded-2xl p-8 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 animate-on-scroll">
+        <div class="w-16 h-16 bg-gradient-to-br from-rose-500 to-rose-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold text-stone-900 mb-4">Trademark Services</h3>
+        <p class="text-stone-600 mb-6 leading-relaxed">
+          Build and protect your brand identity with comprehensive trademark registration and enforcement services.
+        </p>
+        <ul class="space-y-3 text-stone-700">
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-rose-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Clearance Searches</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-rose-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Registration & Renewal</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-rose-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Brand Enforcement</span>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- IP Strategy -->
+      <div class="group bg-stone-50 rounded-2xl p-8 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 animate-on-scroll">
+        <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold text-stone-900 mb-4">IP Strategy</h3>
+        <p class="text-stone-600 mb-6 leading-relaxed">
+          Develop comprehensive intellectual property portfolios aligned with your business objectives.
+        </p>
+        <ul class="space-y-3 text-stone-700">
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-emerald-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Portfolio Development</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-emerald-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Competitive Analysis</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-emerald-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Licensing & Monetization</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- CTA -->
+    <div class="text-center mt-16">
+      <a href="#contact" class="inline-flex items-center gap-2 px-8 py-4 text-lg font-semibold bg-stone-900 text-white rounded-full hover:bg-stone-800 hover:scale-105 transition-all duration-300">
+        Discuss Your IP Needs
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </a>
     </div>
   </div>
 </section>

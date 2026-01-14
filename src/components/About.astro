@@ -1,74 +1,131 @@
 ---
-const stats = [
-  { number: "500+", label: "Patents Filed" },
-  { number: "15+", label: "Years Experience" },
-  { number: "98%", label: "Success Rate" },
-  { number: "200+", label: "Happy Clients" }
-];
+// About Component
 ---
 
-<section id="about" class="py-24 md:py-32 bg-gradient-to-br from-stone-50 via-amber-50/20 to-white">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="grid lg:grid-cols-2 gap-16 items-center">
-      <div class="animate-on-scroll">
-        <h2 class="text-4xl md:text-5xl font-bold text-stone-900 mb-6">
-          Your Trusted IP Partner
-        </h2>
-        <p class="text-xl text-stone-700 mb-6 leading-relaxed">
-          At Miller IP, we combine deep technical expertise with strategic business acumen to protect and maximize the value of your intellectual property.
+<section id="about" class="py-24 md:py-32 lg:py-40 bg-stone-50">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16 md:mb-20">
+      <h2 class="text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter text-stone-900 mb-6 animate-on-scroll">
+        ABOUT MILLER IP
+      </h2>
+      <p class="text-xl text-stone-600 leading-relaxed animate-on-scroll">
+        A boutique intellectual property firm dedicated to protecting innovations that matter.
+      </p>
+    </div>
+    
+    <!-- Firm Story -->
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20">
+      <div class="space-y-6 animate-on-scroll">
+        <h3 class="text-3xl md:text-4xl font-bold text-stone-900">Excellence Through Experience</h3>
+        <p class="text-lg text-stone-600 leading-relaxed">
+          Founded on the principle that every innovation deserves exceptional protection, Miller IP combines deep technical expertise with strategic business acumen.
         </p>
-        <p class="text-lg text-stone-600 mb-8">
-          Our team of experienced attorneys has successfully prosecuted patents across diverse technology areas, from software and AI to medical devices and clean energy. We take pride in understanding not just the legal aspects, but the business goals behind every innovation.
+        <p class="text-lg text-stone-600 leading-relaxed">
+          Our team brings together decades of experience from leading law firms and in-house positions at Fortune 500 companies. We understand both the legal complexities and business realities of intellectual property.
         </p>
-        <div class="grid grid-cols-2 gap-6">
-          {stats.map(stat => (
-            <div class="text-center p-6 bg-white rounded-xl shadow-lg">
-              <div class="text-3xl font-bold gradient-text mb-1">{stat.number}</div>
-              <div class="text-stone-600">{stat.label}</div>
-            </div>
-          ))}
+        <div class="flex flex-wrap gap-6 pt-4">
+          <div>
+            <div class="text-3xl font-black text-amber-600">15+</div>
+            <div class="text-stone-600">Years in Practice</div>
+          </div>
+          <div>
+            <div class="text-3xl font-black text-amber-600">500+</div>
+            <div class="text-stone-600">Patents Filed</div>
+          </div>
+          <div>
+            <div class="text-3xl font-black text-amber-600">98%</div>
+            <div class="text-stone-600">Success Rate</div>
+          </div>
         </div>
       </div>
       
       <div class="relative animate-on-scroll">
-        <div class="absolute inset-0 bg-gradient-to-r from-amber-400/20 to-rose-400/20 rounded-3xl blur-3xl"></div>
-        <div class="relative bg-white rounded-3xl p-12 shadow-2xl">
-          <h3 class="text-2xl font-bold text-stone-900 mb-6">Why Choose Miller IP?</h3>
-          <div class="space-y-4">
-            <div class="flex gap-4">
-              <div class="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                <svg class="w-6 h-6 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                </svg>
-              </div>
-              <div>
-                <h4 class="font-semibold text-stone-900 mb-1">Fast & Efficient</h4>
-                <p class="text-stone-600">Streamlined processes to get your IP protected quickly</p>
-              </div>
-            </div>
-            <div class="flex gap-4">
-              <div class="w-12 h-12 bg-rose-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                <svg class="w-6 h-6 text-rose-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                </svg>
-              </div>
-              <div>
-                <h4 class="font-semibold text-stone-900 mb-1">Proven Track Record</h4>
-                <p class="text-stone-600">98% success rate in patent and trademark applications</p>
-              </div>
-            </div>
-            <div class="flex gap-4">
-              <div class="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                <svg class="w-6 h-6 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
-                </svg>
-              </div>
-              <div>
-                <h4 class="font-semibold text-stone-900 mb-1">Personal Attention</h4>
-                <p class="text-stone-600">Direct access to experienced attorneys, not paralegals</p>
-              </div>
-            </div>
+        <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+          <img 
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop" 
+            alt="Modern law office interior"
+            class="w-full h-full object-cover"
+          />
+          <div class="absolute inset-0 bg-gradient-to-br from-stone-900/20 to-transparent"></div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Values -->
+    <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl mb-20">
+      <h3 class="text-3xl font-bold text-stone-900 text-center mb-12 animate-on-scroll">Our Core Values</h3>
+      <div class="grid md:grid-cols-3 gap-8" data-stagger-children>
+        <div class="text-center animate-on-scroll">
+          <div class="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-10 h-10 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
           </div>
+          <h4 class="text-xl font-bold text-stone-900 mb-2">Integrity</h4>
+          <p class="text-stone-600">Unwavering commitment to ethical practice and transparent communication.</p>
+        </div>
+        
+        <div class="text-center animate-on-scroll">
+          <div class="w-20 h-20 bg-rose-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-10 h-10 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h4 class="text-xl font-bold text-stone-900 mb-2">Innovation</h4>
+          <p class="text-stone-600">Embracing creative solutions and cutting-edge strategies.</p>
+        </div>
+        
+        <div class="text-center animate-on-scroll">
+          <div class="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-10 h-10 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+          </div>
+          <h4 class="text-xl font-bold text-stone-900 mb-2">Partnership</h4>
+          <p class="text-stone-600">Building lasting relationships through collaborative success.</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Team Preview -->
+    <div class="text-center">
+      <h3 class="text-3xl font-bold text-stone-900 mb-8 animate-on-scroll">Meet Our Team</h3>
+      <div class="grid md:grid-cols-3 gap-8 mb-12" data-stagger-children>
+        <div class="animate-on-scroll">
+          <div class="aspect-square rounded-2xl overflow-hidden mb-4">
+            <img 
+              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop" 
+              alt="Senior Partner"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          <h4 class="text-xl font-bold text-stone-900">James Miller</h4>
+          <p class="text-stone-600">Founding Partner</p>
+        </div>
+        
+        <div class="animate-on-scroll">
+          <div class="aspect-square rounded-2xl overflow-hidden mb-4">
+            <img 
+              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop" 
+              alt="Patent Attorney"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          <h4 class="text-xl font-bold text-stone-900">Sarah Chen</h4>
+          <p class="text-stone-600">Senior Patent Attorney</p>
+        </div>
+        
+        <div class="animate-on-scroll">
+          <div class="aspect-square rounded-2xl overflow-hidden mb-4">
+            <img 
+              src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop" 
+              alt="IP Strategist"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          <h4 class="text-xl font-bold text-stone-900">Michael Rodriguez</h4>
+          <p class="text-stone-600">IP Strategy Director</p>
         </div>
       </div>
     </div>

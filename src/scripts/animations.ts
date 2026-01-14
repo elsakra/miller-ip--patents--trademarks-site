@@ -1,4 +1,4 @@
-// Scroll reveal animation
+// Intersection Observer for scroll animations
 const observerOptions = {
   threshold: 0.1,
   rootMargin: '0px 0px -50px 0px'
@@ -7,19 +7,32 @@ const observerOptions = {
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry, index) => {
     if (entry.isIntersecting) {
-      // Add stagger delay based on index
+      // Add stagger delay for elements with data-stagger attribute
+      const staggerDelay = entry.target.hasAttribute('data-stagger') 
+        ? parseInt(entry.target.getAttribute('data-stagger') || '0') * 100
+        : 0;
+      
       setTimeout(() => {
         entry.target.classList.add('animate-in');
-      }, index * 100);
+      }, staggerDelay);
+      
+      // Unobserve after animation
+      observer.unobserve(entry.target);
     }
   });
 }, observerOptions);
 
-// Observe all elements with animate-on-scroll class
-document.addEventListener('DOMContentLoaded', () => {
-  const elements = document.querySelectorAll('.animate-on-scroll');
-  elements.forEach(el => observer.observe(el));
-
+// Initialize animations
+function initAnimations() {
+  // Observe all elements with animate-on-scroll class
+  document.querySelectorAll('.animate-on-scroll').forEach((el, index) => {
+    // Add stagger index for grouped elements
+    if (el.parentElement?.hasAttribute('data-stagger-children')) {
+      el.setAttribute('data-stagger', index.toString());
+    }
+    observer.observe(el);
+  });
+  
   // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -33,4 +46,13 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-});
+}
+
+// Run when DOM is loaded
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initAnimations);
+} else {
+  initAnimations();
+}
+
+export { initAnimations };
