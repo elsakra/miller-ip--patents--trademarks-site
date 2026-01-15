@@ -1,101 +1,64 @@
 ---
-// Expertise Component
 ---
 
-<section id="expertise" class="py-24 md:py-32 lg:py-40 bg-stone-900 text-white overflow-hidden">
-  <!-- Background texture -->
-  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(217,119,6,0.15),transparent_50%),radial-gradient(ellipse_at_bottom_left,rgba(220,38,38,0.10),transparent_50%)]"></div>
-  
-  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-    <!-- Section Header -->
-    <div class="text-center max-w-3xl mx-auto mb-16 md:mb-20">
-      <h2 class="text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter mb-6 animate-on-scroll">
-        INDUSTRY EXPERTISE
-      </h2>
-      <p class="text-xl text-stone-300 leading-relaxed animate-on-scroll">
-        Deep domain knowledge across diverse technology sectors and industries.
-      </p>
-    </div>
-    
-    <!-- Expertise Grid -->
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6" data-stagger-children>
-      <!-- Technology -->
-      <div class="group backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-white/20 transition-all duration-300 animate-on-scroll">
-        <div class="text-amber-400 mb-4">
-          <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-          </svg>
-        </div>
-        <h3 class="text-xl font-bold mb-2">Technology</h3>
-        <p class="text-stone-400 text-sm leading-relaxed">Software, AI/ML, cybersecurity, and emerging tech innovations.</p>
-      </div>
-      
-      <!-- Life Sciences -->
-      <div class="group backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-white/20 transition-all duration-300 animate-on-scroll">
-        <div class="text-rose-400 mb-4">
-          <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
-          </svg>
-        </div>
-        <h3 class="text-xl font-bold mb-2">Life Sciences</h3>
-        <p class="text-stone-400 text-sm leading-relaxed">Biotech, pharmaceuticals, medical devices, and diagnostics.</p>
-      </div>
-      
-      <!-- Manufacturing -->
-      <div class="group backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-white/20 transition-all duration-300 animate-on-scroll">
-        <div class="text-emerald-400 mb-4">
-          <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
-          </svg>
-        </div>
-        <h3 class="text-xl font-bold mb-2">Manufacturing</h3>
-        <p class="text-stone-400 text-sm leading-relaxed">Advanced materials, industrial processes, and mechanical innovations.</p>
-      </div>
-      
-      <!-- Consumer Products -->
-      <div class="group backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-white/20 transition-all duration-300 animate-on-scroll">
-        <div class="text-purple-400 mb-4">
-          <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
-          </svg>
-        </div>
-        <h3 class="text-xl font-bold mb-2">Consumer Products</h3>
-        <p class="text-stone-400 text-sm leading-relaxed">Retail innovations, packaging, and consumer electronics.</p>
-      </div>
-    </div>
-    
-    <!-- Featured Case Study -->
-    <div class="mt-20 bg-gradient-to-br from-amber-600/10 to-rose-600/10 backdrop-blur-xl border border-white/10 rounded-3xl p-8 md:p-12">
-      <div class="grid lg:grid-cols-2 gap-8 items-center">
-        <div>
-          <h3 class="text-3xl font-bold mb-4 animate-on-scroll">Success Story</h3>
-          <p class="text-stone-300 leading-relaxed mb-6 animate-on-scroll">
-            Recently secured patent protection for a groundbreaking AI-powered medical diagnostic system, enabling our client to secure $50M in Series B funding and establish market leadership.
-          </p>
-          <div class="flex items-center gap-6 animate-on-scroll">
-            <div>
-              <div class="text-2xl font-bold text-amber-400">3 Patents</div>
-              <div class="text-stone-400">Filed & Granted</div>
-            </div>
-            <div>
-              <div class="text-2xl font-bold text-amber-400">18 Months</div>
-              <div class="text-stone-400">To Grant</div>
-            </div>
-            <div>
-              <div class="text-2xl font-bold text-amber-400">$50M</div>
-              <div class="text-stone-400">Funding Secured</div>
-            </div>
+<section id="expertise" class="py-32 md:py-40 bg-slate-900 text-white noise-texture" data-module-key="expertise" data-dominant-signal="stat">
+  <div class="max-w-7xl mx-auto px-8">
+    <div class="grid md:grid-cols-5 gap-16 items-center">
+      <div class="md:col-span-2">
+        <h2 class="text-6xl font-bold tracking-tight text-stone-50 mb-6 animate-on-scroll" data-section-header-recipe="primary">Industry Expertise</h2>
+        <p class="text-xl text-slate-400 mb-8 animate-on-scroll">
+          Deep technical knowledge across diverse industries ensures your IP strategy aligns with your business goals.
+        </p>
+        <div class="space-y-6 animate-on-scroll">
+          <div class="flex items-center gap-4">
+            <div class="text-5xl font-bold text-amber-500 tracking-tight leading-none" data-stat-recipe="primary">25+</div>
+            <div class="text-slate-400">Industries Served</div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="text-5xl font-bold text-amber-500 tracking-tight leading-none" data-stat-recipe="primary">$2B+</div>
+            <div class="text-slate-400">IP Portfolio Value Protected</div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="text-5xl font-bold text-amber-500 tracking-tight leading-none" data-stat-recipe="primary">98%</div>
+            <div class="text-slate-400">Client Success Rate</div>
           </div>
         </div>
-        <div class="relative animate-on-scroll">
-          <img 
-            src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop" 
-            alt="Medical technology innovation"
-            class="rounded-2xl shadow-2xl"
-          />
-          <div class="absolute inset-0 bg-gradient-to-t from-stone-900/40 to-transparent rounded-2xl"></div>
+      </div>
+      
+      <div class="md:col-span-3">
+        <div class="grid grid-cols-2 gap-6">
+          <div class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-white/20 transition-all duration-300 animate-on-scroll">
+            <h3 class="text-xl font-semibold mb-2">Technology & Software</h3>
+            <p class="text-slate-400 text-sm">AI/ML, blockchain, SaaS platforms, mobile applications</p>
+          </div>
+          <div class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-white/20 transition-all duration-300 animate-on-scroll">
+            <h3 class="text-xl font-semibold mb-2">Life Sciences</h3>
+            <p class="text-slate-400 text-sm">Biotechnology, pharmaceuticals, medical devices</p>
+          </div>
+          <div class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-white/20 transition-all duration-300 animate-on-scroll">
+            <h3 class="text-xl font-semibold mb-2">Clean Energy</h3>
+            <p class="text-slate-400 text-sm">Solar, wind, battery technology, sustainable materials</p>
+          </div>
+          <div class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-white/20 transition-all duration-300 animate-on-scroll">
+            <h3 class="text-xl font-semibold mb-2">Consumer Products</h3>
+            <p class="text-slate-400 text-sm">Electronics, fashion, food & beverage brands</p>
+          </div>
+          <div class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-white/20 transition-all duration-300 animate-on-scroll">
+            <h3 class="text-xl font-semibold mb-2">Manufacturing</h3>
+            <p class="text-slate-400 text-sm">Industrial processes, materials science, automation</p>
+          </div>
+          <div class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-white/20 transition-all duration-300 animate-on-scroll">
+            <h3 class="text-xl font-semibold mb-2">Financial Services</h3>
+            <p class="text-slate-400 text-sm">Fintech, payment systems, trading algorithms</p>
+          </div>
         </div>
       </div>
+    </div>
+    
+    <!-- Expertise visual -->
+    <div class="mt-16 relative rounded-2xl overflow-hidden animate-on-scroll">
+      <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=2070&auto=format&fit=crop" alt="Industry expertise visualization" class="w-full h-64 object-cover opacity-50" />
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/80 to-transparent"></div>
     </div>
   </div>
 </section>

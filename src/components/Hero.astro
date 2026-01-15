@@ -1,65 +1,52 @@
 ---
-// Hero Component - The most important section
 ---
 
-<section id="home" class="relative min-h-screen bg-stone-50 overflow-hidden noise-texture">
-  <!-- Warm gradient background -->
-  <div class="absolute inset-0 bg-gradient-to-br from-amber-50/50 via-stone-50 to-rose-50/30"></div>
+<section id="home" class="relative min-h-screen bg-slate-950 overflow-hidden noise-texture" data-hero-pattern="full-bleed-photo" data-module-key="hero" data-dominant-signal="image">
+  <!-- Gradient orbs for visual interest -->
+  <div class="absolute top-0 left-1/5 w-[600px] h-[600px] bg-amber-500/30 rounded-full blur-[120px]"></div>
+  <div class="absolute bottom-0 right-1/5 w-[500px] h-[500px] bg-emerald-600/20 rounded-full blur-[100px]"></div>
   
-  <!-- Navigation -->
-  <nav class="relative z-20 px-6 lg:px-8 py-6">
-    <div class="max-w-7xl mx-auto flex items-center justify-between">
-      <!-- Logo -->
-      <a href="/" class="text-2xl font-black tracking-tight text-stone-900">
-        MILLER IP
-      </a>
-      
-      <!-- Navigation Links -->
-      <div class="hidden md:flex items-center gap-8">
-        <a href="#services" class="text-stone-700 hover:text-stone-900 font-medium transition-colors">Services</a>
-        <a href="#expertise" class="text-stone-700 hover:text-stone-900 font-medium transition-colors">Expertise</a>
-        <a href="#about" class="text-stone-700 hover:text-stone-900 font-medium transition-colors">About</a>
-        <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3 bg-stone-900 text-white rounded-full font-semibold hover:bg-stone-800 hover:scale-105 transition-all duration-300">
-          Schedule Consultation
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-          </svg>
-        </a>
+  <!-- Hero background image with warm grading overlay -->
+  <div class="absolute inset-0 z-0">
+    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop" alt="Innovation background" class="w-full h-full object-cover opacity-20" />
+    <div class="absolute inset-0 bg-amber-500/10"></div>
+  </div>
+  
+  <!-- Fixed Navigation with blur backdrop -->
+  <nav class="fixed top-0 left-0 right-0 z-30 backdrop-blur-md bg-slate-950/80 border-b border-white/10">
+    <div class="px-8 py-6">
+      <div class="max-w-7xl mx-auto flex items-center justify-between">
+        <a href="/" class="text-2xl font-display font-bold text-stone-50">Miller IP</a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#services" class="text-stone-50/80 hover:text-amber-400 hover:shadow-[0_0_20px_rgba(245,158,11,0.5)] transition-all duration-200">Services</a>
+          <a href="#expertise" class="text-stone-50/80 hover:text-amber-400 hover:shadow-[0_0_20px_rgba(245,158,11,0.5)] transition-all duration-200">Expertise</a>
+          <a href="#process" class="text-stone-50/80 hover:text-amber-400 hover:shadow-[0_0_20px_rgba(245,158,11,0.5)] transition-all duration-200">Process</a>
+          <a href="#testimonials" class="text-stone-50/80 hover:text-amber-400 hover:shadow-[0_0_20px_rgba(245,158,11,0.5)] transition-all duration-200">Testimonials</a>
+          <a href="#contact" class="px-6 py-2.5 bg-amber-500 text-white font-semibold rounded-full hover:scale-105 hover:bg-amber-400 hover:shadow-[0_0_30px_rgba(245,158,11,0.6)] transition-all duration-200 shadow-lg" data-button-recipe="primary">Get Started</a>
+        </div>
       </div>
-      
-      <!-- Mobile menu button -->
-      <button class="md:hidden text-stone-900">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
     </div>
   </nav>
   
-  <!-- Hero Content -->
-  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-24 md:py-32 lg:py-40">
-    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-      <!-- Text Content -->
-      <div class="space-y-8">
-        <h1 class="text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-none text-stone-900">
-          PROTECTING
-          <span class="gradient-text">YOUR</span>
-          INNOVATIONS
+  <!-- Hero content -->
+  <div class="relative z-10 max-w-7xl mx-auto px-8 pt-40 pb-32 md:pt-48 md:pb-40">
+    <div class="grid md:grid-cols-5 gap-12 items-center">
+      <div class="md:col-span-3">
+        <h1 class="text-8xl font-bold tracking-tighter leading-none text-stone-50 mb-6 animate-on-scroll">
+          Protect your <span class="gradient-text">innovation</span>
         </h1>
-        
-        <p class="text-xl md:text-2xl text-stone-700 leading-relaxed max-w-lg">
+        <p class="text-xl leading-relaxed text-slate-400 max-w-2xl mb-8 animate-on-scroll">
           Expert patent and trademark services that safeguard your intellectual property and fuel your business growth.
         </p>
-        
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="#contact" class="inline-flex items-center gap-2 px-8 py-4 text-lg font-semibold bg-gradient-to-r from-amber-600 to-amber-700 text-white rounded-full shadow-lg shadow-amber-600/25 hover:shadow-xl hover:shadow-amber-600/30 hover:scale-105 transition-all duration-300">
-            Schedule Consultation
+        <div class="flex flex-wrap gap-4 animate-on-scroll">
+          <a href="#contact" class="inline-flex items-center gap-2 px-8 py-4 text-xl font-semibold bg-gradient-to-r from-amber-500 to-emerald-600 text-white rounded-full shadow-lg shadow-amber-500/25 hover:shadow-xl hover:shadow-amber-500/40 hover:scale-105 transition-all duration-300" data-button-recipe="primary">
+            Schedule IP Consultation
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
             </svg>
           </a>
-          <a href="#services" class="inline-flex items-center gap-2 px-8 py-4 text-lg font-semibold backdrop-blur-xl bg-white/80 border border-stone-200 rounded-full hover:bg-white hover:shadow-lg transition-all duration-300">
-            Explore Services
+          <a href="#services" class="inline-flex items-center gap-2 px-8 py-4 text-xl font-semibold bg-white/10 backdrop-blur-sm text-white rounded-full border border-white/20 hover:bg-white/20 hover:scale-105 transition-all duration-300" data-button-recipe="secondary">
+            Learn More
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
             </svg>
@@ -67,46 +54,13 @@
         </div>
       </div>
       
-      <!-- Hero Image -->
-      <div class="relative animate-on-scroll">
-        <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-          <img 
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop" 
-            alt="Professional intellectual property attorney"
-            class="w-full h-full object-cover"
-          />
-          <div class="absolute inset-0 bg-gradient-to-t from-stone-900/20 to-transparent"></div>
-        </div>
-        <!-- Floating accent elements -->
-        <div class="absolute -top-4 -right-4 w-24 h-24 bg-amber-400/20 rounded-full blur-2xl"></div>
-        <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-rose-400/20 rounded-full blur-2xl"></div>
-      </div>
-    </div>
-    
-    <!-- Trust Indicators -->
-    <div class="mt-20 pt-12 border-t border-stone-200">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-        <div class="animate-on-scroll" data-stagger="0">
-          <div class="text-3xl font-black text-amber-600">500+</div>
-          <div class="text-stone-600 mt-1">Patents Filed</div>
-        </div>
-        <div class="animate-on-scroll" data-stagger="1">
-          <div class="text-3xl font-black text-amber-600">98%</div>
-          <div class="text-stone-600 mt-1">Success Rate</div>
-        </div>
-        <div class="animate-on-scroll" data-stagger="2">
-          <div class="text-3xl font-black text-amber-600">15+</div>
-          <div class="text-stone-600 mt-1">Years Experience</div>
-        </div>
-        <div class="animate-on-scroll" data-stagger="3">
-          <div class="text-3xl font-black text-amber-600">200+</div>
-          <div class="text-stone-600 mt-1">Happy Clients</div>
+      <!-- Professional photo with hover effect -->
+      <div class="md:col-span-2 animate-on-scroll">
+        <div class="relative group">
+          <div class="absolute -inset-4 bg-gradient-to-r from-amber-500 to-emerald-600 rounded-2xl blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+          <img src="https://images.unsplash.com/photo-1556075798-4825dfaaf498?q=80&w=2076&auto=format&fit=crop" alt="Legal professional" class="relative rounded-2xl shadow-2xl w-full h-auto transform transition-transform duration-300 group-hover:scale-105" />
         </div>
       </div>
     </div>
   </div>
 </section>
-
-<script>
-  import '../scripts/animations.ts';
-</script>
